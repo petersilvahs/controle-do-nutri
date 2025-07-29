@@ -1,0 +1,234 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Peter Silva",
+      "age": 32,
+      "email": "peter.silva@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Fernanda Souza",
+      "age": 45,
+      "email": "fernanda.souza@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Flavia Leite",
+      "age": 28,
+      "email": "flavialeite@hotmail.com"
+    }
+  ],
+  "plans": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "date": "2025-07-25",
+      "planoNutricional": {
+        "nome": "Plano de Massa Muscular",
+        "duracao": "7 dias",
+        "dias": [
+          {
+            "dia": 1,
+            "refeicoes": [
+              {
+                "horario": "08:00",
+                "nome": "Café da Manhã",
+                "alimentos": [
+                  {
+                    "nome": "Ovos mexidos",
+                    "quantidade": "3",
+                    "unidadeMedida": "unidades"
+                  },
+                  {
+                    "nome": "Pão integral",
+                    "quantidade": "2",
+                    "unidadeMedida": "fatias"
+                  }
+                ]
+              },
+              {
+                "horario": "12:00",
+                "nome": "Almoço",
+                "alimentos": [
+                  {
+                    "nome": "Arroz integral",
+                    "quantidade": "120",
+                    "unidadeMedida": "gramas"
+                  },
+                  {
+                    "nome": "Frango grelhado",
+                    "quantidade": "200",
+                    "unidadeMedida": "gramas"
+                  }
+                ]
+              },
+              {
+                "horario": "16:00",
+                "nome": "Lanche",
+                "alimentos": [
+                  {
+                    "nome": "Iogurte natural",
+                    "quantidade": "1",
+                    "unidadeMedida": "unidade"
+                  },
+                  {
+                    "nome": "Banana",
+                    "quantidade": "1",
+                    "unidadeMedida": "unidade"
+                  }
+                ]
+              },
+              {
+                "horario": "20:00",
+                "nome": "Jantar",
+                "alimentos": [
+                  {
+                    "nome": "Carne bovina",
+                    "quantidade": "180",
+                    "unidadeMedida": "gramas"
+                  },
+                  {
+                    "nome": "Legumes no vapor",
+                    "quantidade": "150",
+                    "unidadeMedida": "gramas"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "patientId": 2,
+      "date": "2025-07-26",
+      "planoNutricional": {
+        "nome": "Plano de Emagrecimento",
+        "duracao": "7 dias",
+        "dias": [
+          {
+            "dia": 1,
+            "refeicoes": [
+              {
+                "horario": "07:30",
+                "nome": "Café da Manhã",
+                "alimentos": [
+                  {
+                    "nome": "Vitamina de morango com chia",
+                    "quantidade": "250",
+                    "unidadeMedida": "ml"
+                  }
+                ]
+              },
+              {
+                "horario": "12:00",
+                "nome": "Almoço",
+                "alimentos": [
+                  {
+                    "nome": "Peito de frango",
+                    "quantidade": "100",
+                    "unidadeMedida": "gramas"
+                  },
+                  {
+                    "nome": "Salada crua",
+                    "quantidade": "100",
+                    "unidadeMedida": "gramas"
+                  }
+                ]
+              },
+              {
+                "horario": "15:30",
+                "nome": "Lanche da Tarde",
+                "alimentos": [
+                  {
+                    "nome": "Maçã",
+                    "quantidade": "1",
+                    "unidadeMedida": "unidade"
+                  }
+                ]
+              },
+              {
+                "horario": "19:30",
+                "nome": "Jantar",
+                "alimentos": [
+                  {
+                    "nome": "Sopa de legumes",
+                    "quantidade": "300",
+                    "unidadeMedida": "ml"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "patientId": 3,
+      "date": "2025-07-27",
+      "planoNutricional": {
+        "nome": "Plano de Reeducação Alimentar",
+        "duracao": "7 dias",
+        "dias": [
+          {
+            "dia": 1,
+            "refeicoes": [
+              {
+                "horario": "08:30",
+                "nome": "Café da Manhã",
+                "alimentos": [
+                  {
+                    "nome": "Tapioca com queijo branco",
+                    "quantidade": "1",
+                    "unidadeMedida": "unidade"
+                  }
+                ]
+              },
+              {
+                "horario": "13:00",
+                "nome": "Almoço",
+                "alimentos": [
+                  {
+                    "nome": "Peixe assado",
+                    "quantidade": "120",
+                    "unidadeMedida": "gramas"
+                  },
+                  {
+                    "nome": "Batata doce",
+                    "quantidade": "100",
+                    "unidadeMedida": "gramas"
+                  }
+                ]
+              },
+              {
+                "horario": "17:00",
+                "nome": "Lanche",
+                "alimentos": [
+                  {
+                    "nome": "Iogurte sem açúcar",
+                    "quantidade": "1",
+                    "unidadeMedida": "unidade"
+                  }
+                ]
+              },
+              {
+                "horario": "20:30",
+                "nome": "Jantar",
+                "alimentos": [
+                  {
+                    "nome": "Salada de folhas verdes",
+                    "quantidade": "150",
+                    "unidadeMedida": "gramas"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
