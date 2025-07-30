@@ -1,12 +1,9 @@
 <template>
   <n-config-provider :theme="naiveTheme">
-    <div
-      :class="
-        theme === 'dark'
-          ? 'dark bg-gray-900 text-white min-h-screen'
-          : 'bg-white text-gray-900 min-h-screen'
-      "
-    >
+    <div :class="theme === 'dark'
+        ? 'dark bg-gray-900 text-white min-h-screen'
+        : 'bg-white text-gray-900 min-h-screen'
+      ">
       <div class="p-6 max-w-4xl mx-auto">
         <div class="flex flex-col md:flex-row gap-6 mb-6">
           <div class="flex-1">
@@ -41,29 +38,29 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from "vue"
-import { useRoute } from "vue-router"
-import axios from "axios"
-import { NButton, NCard, NConfigProvider, darkTheme } from "naive-ui"
-import PlanHistory from "../components/PlanHistory.vue"
-import PlanModal from "../components/PlanModal.vue"
-import { useTheme } from "../composables/useTheme"
+import { ref, onMounted, computed } from "vue";
+import { useRoute } from "vue-router";
+import axios from "axios";
+import { NButton, NCard, NConfigProvider, darkTheme } from "naive-ui";
+import PlanHistory from "../components/PlanHistory.vue";
+import PlanModal from "../components/PlanModal.vue";
+import { useTheme } from "../composables/useTheme";
 
-const route = useRoute()
-const plans = ref([])
-const showModal = ref(false)
-const { theme } = useTheme()
+const route = useRoute();
+const plans = ref([]);
+const showModal = ref(false);
+const { theme } = useTheme();
 
-const naiveTheme = computed(() => (theme.value === "dark" ? darkTheme : null))
+const naiveTheme = computed(() => (theme.value === "dark" ? darkTheme : null));
 
 function openModal() {
-  showModal.value = true
+  showModal.value = true;
 }
 
 onMounted(async () => {
   const { data } = await axios.get(
     `http://localhost:3001/plans?patientId=${route.params.id}`,
-  )
-  plans.value = data
-})
+  );
+  plans.value = data;
+});
 </script>

@@ -1,5 +1,6 @@
 import { mount } from "@vue/test-utils"
 import PatientDetailView from "../../src/views/PatientDetailView.vue"
+import { describe, it, expect, vi} from "vitest"
 
 vi.mock("axios", () => ({
   default: {
@@ -14,7 +15,7 @@ describe("PatientDetailView.vue", () => {
         stubs: ["router-link"],
       },
     })
-    await wrapper.vm.$nextTick();
+    await wrapper.vm.$nextTick()
     expect(wrapper.text()).toContain("Novo Plano Nutricional")
   })
 })

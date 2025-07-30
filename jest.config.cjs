@@ -1,10 +1,11 @@
 module.exports = {
-  moduleFileExtensions: ["js", "json", "vue"],
+  moduleFileExtensions: ["js", "json", "vue", "ts"],
   transform: {
     "^.+\\.vue$": "vue-jest",
+    "^.+\\.ts$": "ts-jest",
     "^.+\\.js$": "babel-jest",
   },
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["@testing-library/jest-dom"],
-  testMatch: ["**/__tests__/**/*.spec.[jt]s?(x)"],
+  testMatch: ["**/*.spec.ts"],
 };

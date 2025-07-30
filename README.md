@@ -30,3 +30,4 @@ npx json-server --watch db.json --port 3001
 
 # Rode o app em modo dev
 npm run dev
+```

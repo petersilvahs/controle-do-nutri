@@ -5,12 +5,12 @@
 </template>
 
 <script setup>
-import PlanCard from "./PlanCard.vue";
+import PlanCard from "./PlanCard.vue"
 
 defineProps({
   plans: {
     type: Array,
     required: true,
   },
-});
+})
 </script>

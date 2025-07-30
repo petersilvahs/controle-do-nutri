@@ -17,6 +17,6 @@ defineProps({
     type: Object,
     required: true,
   },
-});
-import PlanDay from "./PlanDay.vue";
+})
+import PlanDay from "./PlanDay.vue"
 </script>

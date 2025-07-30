@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint --ext .ts,.vue src",
     "test": "vitest",
+    "test:unit": "vitest run --coverage",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",
     "format": "prettier --write .",
@@ -23,6 +24,12 @@
     "posttest:coverage": "npm run format:check",
     "dev:api": "json-server --watch db.json --port 3001"
   },
+  "compilerOptions": {
+    "types": [
+      "vitest",
+      "./src/types/flush-promises"
+    ]
+  },
   "dependencies": {
     "axios": "^1.11.0",
     "naive-ui": "^2.42.0",
@@ -35,6 +42,7 @@
     "@testing-library/jest-dom": "^6.6.4",
     "@types/jest": "^30.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vitest/coverage-v8": "^3.2.4",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.21",
@@ -42,7 +50,9 @@
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.3.0",
+    "flush-promises": "^1.0.2",
     "jest": "^26.6.3",
+    "jsdom": "^26.1.0",
     "json-server": "^1.0.0-beta.3",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
