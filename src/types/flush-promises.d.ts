@@ -1,2 +1,1 @@
-declare module "flush-promises"
-    
+declare module 'flush-promises'

@@ -1,13 +1,13 @@
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 my-4">
-    <div
-      v-for="kpi in kpis"
-      :key="kpi.label"
-      class="bg-white dark:bg-gray-800 border rounded-lg p-4 shadow"
-    >
-      <h4 class="text-sm text-gray-500 dark:text-gray-300">{{ kpi.label }}</h4>
-      <p class="text-2xl font-semibold">{{ kpi.value }}</p>
-    </div>
+    <Card v-for="kpi in kpis" :key="kpi.label">
+      <template #header>
+        <h4 class="text-sm text-gray-500">{{ kpi.label }}</h4>
+      </template>
+      <template #body>
+        <p class="text-2xl font-semibold">{{ kpi.value }}</p>
+      </template>
+    </Card>
   </div>
 </template>
 
@@ -15,6 +15,7 @@
 import { ref, onMounted, onUnmounted } from "vue"
 import { useRoute } from "vue-router"
 import axios from "axios"
+import { Card } from "@progress/kendo-vue-layout"
 
 const route = useRoute()
 const kpis = ref([

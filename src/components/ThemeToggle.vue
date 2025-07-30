@@ -1,14 +1,14 @@
 <script setup>
 import { useTheme } from "../composables/useTheme"
-import { NButton } from "naive-ui"
+import { Button } from "@progress/kendo-vue-buttons"
 
 const { theme, toggleTheme } = useTheme()
 </script>
 
 <template>
   <div class="flex justify-end">
-    <n-button @click="toggleTheme" type="default">
+    <Button @click="toggleTheme">
       {{ theme === "dark" ? "☀️ Modo Claro" : "🌙 Modo Escuro" }}
-    </n-button>
+    </Button>
   </div>
 </template>

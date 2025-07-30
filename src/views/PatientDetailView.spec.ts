@@ -1,21 +1,21 @@
-import { mount } from "@vue/test-utils"
-import PatientDetailView from "../../src/views/PatientDetailView.vue"
-import { describe, it, expect, vi} from "vitest"
+import { mount } from '@vue/test-utils'
+import PatientDetailView from '../../src/views/PatientDetailView.vue'
+import { describe, it, expect, vi } from 'vitest'
 
-vi.mock("axios", () => ({
+vi.mock('axios', () => ({
   default: {
     get: vi.fn(() => Promise.resolve({ data: [] })),
   },
 }))
 
-describe("PatientDetailView.vue", () => {
-  it("monta corretamente e mostra botão de novo plano", async () => {
+describe('PatientDetailView.vue', () => {
+  it('monta corretamente e mostra botão de novo plano', async () => {
     const wrapper = mount(PatientDetailView, {
       global: {
-        stubs: ["router-link"],
+        stubs: ['router-link'],
       },
     })
     await wrapper.vm.$nextTick()
-    expect(wrapper.text()).toContain("Novo Plano Nutricional")
+    expect(wrapper.text()).toContain('Novo Plano Nutricional')
   })
 })

@@ -51,8 +51,6 @@ import ThemeToggle from "../components/ThemeToggle.vue"
 import {
   NGrid,
   NGridItem,
-  NCard,
-  NAvatar,
   NConfigProvider,
   darkTheme,
 } from "naive-ui"
